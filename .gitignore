@@ -41,6 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 # Agent and documentation files
+file.md
 conception.md
 ts-projects
 /.agents/
