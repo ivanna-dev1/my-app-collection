@@ -1,0 +1,96 @@
+.event-rsvp-form-project {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #a0e6ff 0%, #ffb6c1 100%);
+  font-family: Arial, sans-serif;
+
+
+  .form-wrap {
+    background-color: #f5f6f7;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1b1b32;
+    margin-top: 30px;
+  }
+
+  .form-wrap h2 {
+    text-align: center;
+    color: #1b1b32;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    color: #1b1b32;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .form-label {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #1b1b32;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+
+  label.checkbox {
+    flex-direction: row;
+    align-items: center;
+    font-weight: normal;
+  }
+
+  label.checkbox input {
+    margin-left: 5px;
+  }
+
+  .submit-btn {
+    margin-top: 20px;
+    padding: 8px 20px;
+    background-color: #69c9d0;
+    color: #1b1b32;
+    border: 1px solid #1b1b32;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+  }
+
+  .submit-btn:hover {
+    background-color: #58b6bd;
+  }
+
+  .results-card {
+    background-color: #f5f6f7;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 1px solid #1b1b32;
+    margin: 20px;
+    animation: slideDown 0.3s ease-out;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

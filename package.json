@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build-shape": "tsc public/projects/shape-manager/index.ts --target es6 --outDir public/projects/shape-manager",
+    "watch-shape": "tsc public/projects/shape-manager/index.ts --target es6 --outDir public/projects/shape-manager --watch"
   },
   "dependencies": {
     "next": "16.2.6",

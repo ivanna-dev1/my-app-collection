@@ -1,0 +1,493 @@
+/* Шапка + презентація */
+
+/* запитати як норм скопіювати силки */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ??для всіх елементів за замовчуванням видаляємо м і р */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* базові налашт шрифта для сайту */
+body {
+  /* шрифт */
+  font-family: "Poppins", sans-serif;
+  /* жирність */
+  font-weight: 400;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* видаляємо підкреслення для всіх силок  */
+a {
+  text-decoration: none;
+}
+
+/* макс ширина для всіх імг 100%, 
+щоб нічого не виходило за межі початкового блоку */
+img {
+  max-width: 100%;
+}
+
+/* звертаємося до обкладинки прописуємо градієнт */
+.wrapper {
+  /* коп з генератора градієнта */
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(26, 14, 1, 1) 100%
+  );
+  /* займає 100% ширини екрану */
+  width: 100%;
+}
+
+/* ширина конт менше ніж ширина екранку+ відступи(блок буде посередині) */
+.container {
+  /* якщо ширина екр менше то указуємо пр 1000рх, отримаємо ті самі відступи */
+  /* width: 1400px; */
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 50px;
+  margin: 0 auto;
+}
+
+/* в шапці будуть відступи зверху і знизу по 50 */
+header {
+  padding: 50px 0;
+}
+
+header .logo,
+footer .block .logo {
+  /* лого буде у верх регістрі+ розм і жирн тексту */
+  text-transform: uppercase;
+  font-size: 29px;
+  font-weight: 800;
+}
+
+/* прописуємо новігацію */
+header nav {
+  /* позиціон по праву стор */
+  float: right;
+  /* буде 50% від розм шапки  */
+  width: 50%;
+}
+
+header nav ul {
+  /* не буде станд відображ списку */
+  list-style: none;
+  /* ??елем розт по техн флекс бокс */
+  display: flex;
+  /* елем розкид на всю шир блоку */
+  justify-content: space-between;
+  z-index: 2;
+  position: relative;
+}
+
+/* зверт до кожного конкр елем, кожн елем це строчний блок, щоб додати педінги і мерджіни*/
+header nav ul li {
+  display: inline-block;
+}
+
+/* зверт до силок */
+header nav ul li a {
+  color: #fff;
+  border-bottom: 5px solid transparent;
+  transition: 150ms ease-in;
+  padding-bottom: 9px;
+}
+
+/* Original solution from Ivanna Kucher  */
+/* header nav ul li.active::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 5px;
+  background: #dc7000;
+  border-radius: 10px;
+  position: relative;
+  top: -10px;
+  left: -15px;
+} */
+
+/* custom solution from Dmytro Bas   ==================== */
+header nav ul li.active::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 5px;
+  background: #dc7000;
+  border-radius: 10px;
+  position: relative;
+  bottom: -35px;
+  left: -15px;
+}
+
+header nav ul li.active::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: #dc7000;
+  border-radius: 10px;
+  position: relative;
+  bottom: -6px;
+  right: -29px;
+}
+/* ========================================================= */
+
+/* створюємо ефект при навед, окр активного і кнопки */
+header nav ul li:not(.active):not(.btn) a:hover {
+  /* обводка знизу */
+  border-bottom: 5px solid #dc7000;
+}
+
+/* указ парам кнопки */
+header nav ul li.btn a,
+.email .block button {
+  background: #fa9021;
+  /* педінги,-внутр відступи, по вис/бок */
+  padding: 9px 17px;
+  /* закругл кутів */
+  border-radius: 5px;
+  /* еф зміни кол і його трив */
+  transition: all 500ms ease;
+  /* щоб не було дурацького підреслення від попер елем */
+  border-bottom: none;
+}
+
+/* ефект при навед на кноп */
+header nav ul li.btn a:hover,
+.email .block button:hover {
+  background: #a02604;
+}
+
+.hero {
+  /* щоб внизу був відступ */
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+/* секц з текстом */
+.hero--info {
+  /* її ширина */
+  width: 530px;
+  /* щоб був відступ від верх секції */
+  padding-top: 70px;
+}
+
+/* устан кол, розм і жирн заголовка */
+.hero--info h2 {
+  color: #e87d0e;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hero--info h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.hero--info p {
+  /* шрифт уже заданий в боді */
+  /* медіум жирн */
+  font-weight: 500;
+  /* висота між рядк */
+  line-height: 170%;
+  /* відступи зверху знизу по 30 */
+  margin: 30px 0;
+}
+
+.hero--info .btn {
+  background: #fa8305;
+  color: #fff;
+  border-radius: 50px;
+  padding: 15px 30px;
+  /* щоб забрати обводку */
+  border: 0;
+  /* плавн перехід */
+  transition: all 500ms ease;
+  font-size: 17px;
+}
+
+/* пропис ефект */
+.hero--info .btn:hover {
+  /* при навед курсора */
+  cursor: pointer;
+  /* змін кнопку, збільш її розм на 10% */
+  transform: scale(1.1);
+}
+
+.hero img {
+  /* абсол позиціон, щоб задати імг конкр місце */
+  position: absolute;
+  /* зверху відступ */
+  top: -150px;
+  /* зправа підступу немає */
+  right: 0;
+}
+/* імг позиц відн ус сторінки ->щоб імг позиц відносно своєї секці(хіро)->  до хіро  position: relative -> тепер об'єкти позиц віднос секц хіро  */
+/* зображ перекрив шапку, треба зроб шари->секц .hero{ z-index:1}
+heade nav ul {z- index: 2 }*/
+/* але z-index працює тільки коли є власт  position: relative, тому добавляємо і його*/
+
+/* секція з іграми */
+.trending {
+  padding-top: 50px;
+}
+
+.trending h3 {
+  font-weight: 600;
+  font-size: 31px;
+}
+
+.trending .see-all,
+.projects .see-all {
+  color: #fff;
+  background: #25211d;
+  border-radius: 5px;
+  padding: 12px 23px;
+  float: right;
+  display: block;
+  transition: all 500ms ease;
+}
+
+.projects .see-all {
+  float: none;
+}
+
+.trending .see-all:hover,
+.projects .see-all:hover {
+  transform: scale(1.1);
+}
+
+.trending .games {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.trending .games span {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.trending .games span img {
+  position: relative;
+  top: 5px;
+  margin-right: 7px;
+}
+
+.big-text {
+  padding: 50px;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  width: 826px;
+}
+
+.banner {
+  padding: 80px 0;
+}
+
+.banner h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.banner p {
+  line-height: 170%;
+  margin-bottom: 30px;
+  width: 550px;
+}
+
+.mini-banner {
+  width: 196px;
+  position: absolute;
+  right: 272px;
+  top: 1669px;
+  /* z-index: 3; */
+}
+
+.big-banner {
+  width: 100%;
+  margin-bottom: 30px;
+  /* z-index: 4; */
+}
+
+/* секція 3 */
+
+.features {
+  background: url("../img/BG.png") no-repeat center fixed;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.features h3,
+.features p {
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features h3 {
+  font-size: 30px;
+}
+
+.features .info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features .info .block {
+  text-align: center;
+  width: 20%;
+  margin: 30px 2%;
+}
+
+.features .info .block img {
+  margin-bottom: 15px;
+}
+
+.projects {
+  padding: 100px 0;
+}
+
+.projects h3 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.projects p {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.projects .images {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+/* додали кнопку і її характ (вище просто вписали 
+до попередн кнопки) */
+
+.projects .see-all {
+  float: none;
+  width: 70px;
+  text-align: center;
+}
+
+/* секція 4 */
+
+.email {
+  padding-bottom: 120px;
+}
+
+.email h3 {
+  margin-top: 60px;
+  font-size: 30px;
+}
+
+.email .block {
+  background: #1c140f;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 40px 3%;
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email .block h4 {
+  font-size: 30px;
+  font-weight: 500px;
+}
+
+.email .block p {
+  width: 500px;
+}
+
+.email .block input {
+  background: #fff;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  width: 385px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 20px 30px;
+  position: relative;
+  right: -100px;
+  z-index: 1;
+  padding-right: 120px;
+}
+
+.email .block input::placeholder {
+  color: #898989;
+}
+
+/* додаємо кнопку, вона схожа з тою що уже є, 
+тому просто додаємо її адрес до попер характ кнопки   */
+
+.email .block button {
+  cursor: pointer;
+  border: 0;
+  padding: 13px 17px;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+/* Footer */
+
+footer {
+  background: #000;
+  padding: 50px 0;
+}
+
+footer .block {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* logo вписуємо до лого в шапці, буде той самий дизайн */
+
+footer .block p {
+  width: 300px;
+  margin: 15px 0;
+}
+
+footer .block h4 {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+footer .block ul {
+  list-style: none;
+}
+
+footer .block ul li {
+  margin: 7px;
+  opacity: 0.8;
+}
+
+footer hr {
+  margin: 30px 0;
+  border: 0;
+  height: 0.6px;
+  background: #ccc;
+}
+
+footer > p {
+  text-align: center;
+}

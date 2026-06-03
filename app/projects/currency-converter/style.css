@@ -1,0 +1,50 @@
+.currency-converter-project {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0a23;
+  color: white;
+
+
+  .form-wrap {
+    background-color: #1b1b32;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #1b1b32;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .form-wrap h1,
+  .form-wrap h3,
+  .form-wrap h4,
+  .form-wrap span {
+    text-align: center;
+    margin: 5px;
+    padding: 0;
+  }
+
+  h3 {
+    color: #acd157;
+  }
+
+  .form-label {
+    height: 30px !important;
+    margin: 2px;
+    padding: 0 7px;
+    border: 1px solid #1b1b32;
+    border-radius: 5px;
+    color: blue;
+  }
+}

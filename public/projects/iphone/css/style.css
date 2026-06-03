@@ -1,0 +1,483 @@
+a {
+  /* забираємо підкресл у силок */
+  text-decoration: none;
+  /* колір як у *батька* (наслідується з заданих уже */
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  /* щоб не було точок перед кожним словом з меню */
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* font-optical-sizing: auto;    */
+  font-size: 14px;
+  list-style: 18px;
+  font-weight: 400;
+  color: #0a0a0a;
+  /* font-style: normal; */
+}
+
+.header {
+  background-color: #0a0a0a;
+  padding: 33px 0 32px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #717171;
+}
+
+/* .container {
+  border: 1px solid red;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav {
+  border: 1px solid blue;
+} */
+.container {
+  /* background-color: blue; */
+  max-width: 1200px;
+  /* щоб поставити одинакові віступи пишемо авто */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.nav {
+  /* для того щоб елем розприділити як хочеш */
+  display: flex;
+  /* для того щоб розпред рівномірно по полю */
+  justify-content: space-between;
+  /* ?? щоб елем стали по центру */
+  align-items: center;
+}
+
+.menu {
+  /* щоб елем з меню теж лягли в ряд */
+  display: flex;
+  /* наст 2 ряд хз що це , щоб вирівняти лого по центру екрвна */
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.phone {
+  /* хз що це, щоб вирівняти лого поцентру */
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: right;
+  /* потім ще додали розміри бо у футері не пішло */
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.menu-item {
+  /* щоб пункти меню розділилися */
+  padding-right: 30px;
+}
+
+/* між цим включили нормалайз щоб забрати всі 
+непонятні відступи */
+
+/* додали параметри силок і номера і закинули їх в хедер */
+/* .menu-link, .phone { }.. */
+
+.headline {
+  background-color: #f5f5f7;
+  /* групування обєктів по центру */
+  text-align: center;
+  padding: 70px 0 40px;
+}
+
+.title {
+  /* щоб всі букви були капслоком */
+  text-transform: uppercase;
+  /* верхньому задаємо марджен вниз */
+  margin: 0 0 40px;
+  color: #490e84;
+  /* жирн */
+  font-weight: 700;
+  /* розмір шр */
+  font-size: 64px;
+  /* висота строки */
+  line-height: 77px;
+}
+
+.headline-img {
+  /* параметри картинки відст вниз 25 до кнопки*/
+  margin-bottom: 25px;
+}
+
+/* задаємо параметри силці */
+.headline-btn {
+  /* задаємо строчний елемент */
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #490e84;
+  padding: 22px 117px 19px;
+  border-radius: 30px;
+}
+
+/* далі пошаманили з меню і фоун вище, 
+щоб поставити лого поцентру екрана */
+
+.new {
+  padding: 90px 0 150px;
+}
+
+.new-title,
+.color-title {
+  margin: 0 0 50px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #717171;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 700;
+}
+
+.new-info {
+  display: flex;
+  /* щоб вирівняти його по центру */
+  align-items: center;
+}
+
+.new-text p {
+  max-width: 560px;
+  margin: 0 0 30px;
+}
+
+.new-text b {
+  max-width: 560px;
+  font-size: 20px;
+  line-height: 26px;
+  /* коли макс шир не задалася,- робимо цей тег блочним */
+  display: block;
+}
+
+/* вирівн текст і робимо інтервал до нього */
+
+.images-new {
+  margin-left: 190px;
+}
+.color {
+  padding-bottom: 150px;
+}
+
+/* .color-title is above with .new-title */
+
+.color-list {
+  /* щоб картинки лежали в ряд */
+  display: flex;
+  justify-content: space-between;
+  /* щоб текст став по центру під імг  */
+  text-align: center;
+}
+
+.color-item img {
+  margin-bottom: 20px;
+}
+
+.color-item h3 {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0 0 10px;
+}
+
+.color-item p {
+  margin: 0;
+}
+
+.contacts-inner {
+  /* щоб вони лежали поруч */
+  display: flex;
+  background-color: #574b63;
+  color: #fff;
+}
+
+.contacts-form {
+  width: 100%;
+  padding: 140px 93px;
+  text-align: center;
+}
+
+.contacts-title {
+  margin: 0 0 60px;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: left;
+}
+
+.contacts-input {
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #fff;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #574b63;
+}
+
+/* задаємо перам тексту */
+/* вони задаються окремо бо інпут поля 
+не підпорядк параметрам з баді */
+.contacts-input::placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  opacity: 0.5;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.contacts-form p {
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.5;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.contacts-form button {
+  border: none;
+  text-transform: uppercase;
+  color: #490e84;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 16px 81px;
+  font-weight: 400;
+  cursor: pointer;
+}
+/* щоб кнопка стала по центру ставимо 
+текст елайн сентр в контакт форм */
+/* а після вирівнюємо тайтл по лівій стор */
+
+.footer {
+  background-color: #0a0a0a;
+}
+
+/* змістився значок ближче до політ.конф. тому дописали ще це */
+.footer-link {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.footer-inner {
+  color: #717171;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.menu-btn {
+  display: none;
+}
+
+/* робимо адаптив для телефону */
+
+@media (max-width: 1200px) {
+  .headline-img {
+    max-width: 100%;
+  }
+  /* щоб коли змнш імг ставала під іннер */
+  .contacts-inner {
+    display: block;
+  }
+  /* іннер виходив за краї, постав ширину авто */
+  .contacts-form {
+    width: auto;
+  }
+  .contacts-title {
+    text-align: center;
+  }
+  .contacts-img {
+    width: 100%;
+  }
+  .contacts {
+    background-color: #574b63;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* для того щоб ітеми могли перенестися */
+  .color-list {
+    flex-wrap: wrap;
+  }
+  /* щоб 1 ітем займив половину екрану,
+  вийде плитка 2 і 2 */
+  .color-item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 940px) {
+  .menu-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    /* власт що змін порядок флекс елем */
+    order: 1;
+    border: none;
+    cursor: pointer;
+    /* до меню 4п */
+    position: relative;
+    /* шаманимо щоб забпати меню ітем */
+    z-index: 50;
+  }
+  .logo,
+  .phone {
+    position: relative;
+    z-index: 50;
+  }
+  /* робимо меню 4полоски */
+  .btn-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 2px;
+    /* перетв через 3сек */
+    transition: 0.3s ease;
+  }
+  .btn-line:nth-child(1) {
+    top: 0;
+  }
+  .btn-line:nth-child(2) {
+    top: 20px;
+  }
+  .btn-line:nth-child(3) {
+    top: 20px;
+  }
+  .btn-line:nth-child(4) {
+    top: 40px;
+  }
+
+  /* 1і4 лін зникають,а 2і3 перетв на хрестик */
+  .menu-open .btn-line:nth-child(1) {
+    transform: scaleX(0);
+  }
+  .menu-open .btn-line:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  .menu-open .btn-line:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  .menu-open .btn-line:nth-child(4) {
+    transform: scaleX(0);
+  }
+
+  .menu {
+    /* задаємо позиціон, бо власт ни жче діютільки якщо воно є */
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* щоь меню ітеми пропали */
+    transform: translateY(-100%);
+    /* щоб зявл плавно */
+    transition: 0.3s ease;
+  }
+  /* щоб меню ітеми появилися коли меню відкрите */
+  .menu-open .menu {
+    transform: translateY(0);
+  }
+  .menu-item {
+    padding: 50px 0;
+    font-size: 56px;
+  }
+  /* при зменш забирає імг */
+  .images-new {
+    display: none;
+  }
+  .new-text p,
+  .new-text b {
+    max-width: 100%;
+  }
+  .phone {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .headline,
+  .new {
+    padding: 50px 0;
+  }
+  .color {
+    padding-bottom: 50px;
+  }
+  .contacts-form {
+    padding: 50px 70px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    padding: 20px 0;
+    flex-direction: column;
+  }
+  .footer-inner .logo {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .new-title,
+  .color-title .contacts-title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .headline-btn {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 16px 90px;
+  }
+  .color-item,
+  .color-item img {
+    width: 100%;
+  }
+  .contacts-form {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+  .phone {
+    flex-basis: auto;
+    margin-top: 50px;
+    order: 3;
+    width: 100%;
+  }
+  .menu-item {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contacts-form {
+    padding: 50px 10px;
+  }
+}

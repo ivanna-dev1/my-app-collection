@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="rowInput">
+        <div>
+          <ul id="historyInput">
+            <!-- <li>gg1</li>
+            <li>gg2</li> -->
+          </ul>
+        </div>
+        <input id="calcInput" type="text" readonly />
+      </section>
+      <section class="rowBtn">
+        <ul class="row">
+          <li>
+            <button onclick="clickDelete()" class="btn btnTop">C</button>
+          </li>
+          <li>
+            <button onclick="clickChangeSymbol()" class="btn btnTop">
+              +/-
+            </button>
+          </li>
+          <li>
+            <button onclick="clickPersent()" class="btn btnTop">%</button>
+          </li>
+          <li>
+            <button onclick="clickSymbol('/')" class="btn btnSide">/</button>
+          </li>
+        </ul>
+        <ul class="row">
+          <li>
+            <button onclick="clickNumber('7')" class="btn btnNumb">7</button>
+          </li>
+          <li>
+            <button onclick="clickNumber('8')" class="btn btnNumb">8</button>
+          </li>
+          <li>
+            <button onclick="clickNumber('9')" class="btn btnNumb">9</button>
+          </li>
+          <li>
+            <button onclick="clickSymbol('*')" class="btn btnSide">X</button>
+          </li>
+        </ul>
+        <ul class="row">
+          <li>
+            <button onclick="clickNumber('4')" class="btn btnNumb">4</button>
+          </li>
+          <li>
+            <button onclick="clickNumber('5')" class="btn btnNumb">5</button>
+          </li>
+          <li>
+            <button onclick="clickNumber('6')" class="btn btnNumb">6</button>
+          </li>
+          <li>
+            <button onclick="clickSymbol('-')" class="btn btnSide">-</button>
+          </li>
+        </ul>
+        <ul class="row">
+          <li>
+            <button onclick="clickNumber('1')" class="btn btnNumb">1</button>
+          </li>
+          <li>
+            <button onclick="clickNumber('2')" class="btn btnNumb">2</button>
+          </li>
+          <li>
+            <button onclick="clickNumber('3')" class="btn btnNumb">3</button>
+          </li>
+          <li>
+            <button onclick="clickSymbol('+')" class="btn btnSide">+</button>
+          </li>
+        </ul>
+        <ul class="row">
+          <li>
+            <button id="smile" onclick="clickSmile()" class="btn btnNumb">
+              ＾● ⋏ ●＾
+            </button>
+          </li>
+          <li>
+            <button onclick="clickNumber('0')" class="btn btnNumb">0</button>
+          </li>
+          <li>
+            <button onclick="clickPoint()" class="btn btnNumb">,</button>
+          </li>
+          <li>
+            <button onclick="clickEqual()" class="btn btnSide">=</button>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

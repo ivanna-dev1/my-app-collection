@@ -1,0 +1,239 @@
+/* цедля того щоб макс вейт вираховувалася самостійно 
+з урах падінгів по 10, щоб не прилипало до країв, тому не 1200, а 1220*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  /* без підкреслень */
+  text-decoration: none;
+}
+
+ul {
+  /* щоб не було точок перед словами */
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #1b1b1b;
+}
+
+.header {
+  margin-bottom: 90px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.header__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  /* caps lock */
+  text-transform: uppercase;
+  /* приліпиться зліва,- далі зробимо 
+  маргіни для меню,воно відсуне трохи, буде100% як там */
+  margin-left: auto;
+}
+
+.menu {
+  margin-right: 185px;
+  margin-left: 130px;
+}
+
+.menu__item {
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.user-nav {
+  display: flex;
+  /* між ними відст 20 */
+  gap: 0 20px;
+}
+
+.top {
+  margin-bottom: 100px;
+}
+
+/* робимо картинки слайдера  */
+.top-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.top-slide__inner {
+  min-height: 700px;
+  display: flex;
+  justify-content: space-between;
+  /* щоб вирівнялося по висоті */
+  align-items: center;
+  padding: 0 10px;
+}
+
+.top-slide__content {
+  flex-basis: 183px;
+  margin-top: -88px;
+}
+
+.top-slide__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 1.3;
+  margin-bottom: 55px;
+  text-transform: uppercase;
+}
+
+.top-slide__subtitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.top-slide__text {
+  margin-bottom: 20px;
+}
+
+.top-slide__btn {
+  margin-left: auto;
+  color: #7449bb;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 21px 55px;
+  border: 1px solid #7449bb;
+  /* щоб кнопка реагувала на відступи */
+  display: inline-block;
+
+  /* анімація при наведенні */
+  transition: all 0.3s ease;
+}
+
+.button {
+  color: #7449bb;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 21px 55px;
+  border: 1px solid #7449bb;
+  /* щоб кнопка реагувала на відступи */
+  display: inline-block;
+
+  /* анімація при наведенні */
+  transition: all 0.3s ease;
+}
+
+/* при наведенні */
+.button:hover {
+  color: white;
+  background-color: #7449bb;
+}
+
+/* робимо стрілки по боках 
+(міняємо) */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: none;
+}
+
+/* щоб стрілки опустилися вниз */
+.container-arrow {
+  position: relative;
+  padding: 0;
+  min-width: 1200px;
+}
+
+/* щоб стрілки було видно */
+.top .swiper {
+  padding-bottom: 50px;
+}
+
+/* щоб стрілки стали разом  */
+.swiper-button-next {
+  left: 75px;
+  right: auto;
+}
+
+.about {
+  margin-bottom: 150px;
+  overflow: hidden;
+}
+
+.about__inner {
+  padding-left: 200px;
+}
+
+.about__title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 400;
+  max-width: 185px;
+  text-transform: uppercase;
+  line-height: 1.34;
+}
+
+.about__textbox {
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.about__text {
+  flex-basis: 387px;
+  line-height: 1.2;
+}
+
+.about__text p {
+  margin-bottom: 15px;
+}
+
+.about__text--bold {
+  font-weight: 700;
+}
+
+.about__item-title {
+  margin-bottom: 20px;
+}
+
+/* щоб змістити слайдер правіше */
+.about__slider {
+  width: 1600px;
+  padding-left: 200px;
+  margin-left: -200px;
+  /* щоб було видно стрілки */
+  padding-bottom: 20px;
+}
+
+/* щоб змістити стрілку лівіше */
+.about__arrow {
+  margin-left: -198px;
+  margin-top: -6px;
+}
+
+/* щоб стрілкіа не ставала сірою на крайньому слайді */
+.container-arrow .swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+}
