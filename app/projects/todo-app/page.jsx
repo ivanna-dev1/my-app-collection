@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import "./style.css";
+
 function Input(props) {
   const [todo, setTodo] = useState("");
-
   return (
     <form
       onSubmit={(e) => {
@@ -56,7 +56,6 @@ function EditInput(props) {
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
         />
-
         <button className="btn-save" type="submit">
           Save
         </button>
