@@ -3,22 +3,22 @@ import Link from "next/link";
 
 export default function Home() {
   const projectsArray = [
-    {
-      title: "Digital Pet",
-      path: "/projects/digital-pet",
-      image: "/projects/digital-pet/image.png",
-      description: `Digital Pet — React Application
-A virtual pet simulator with needs-based care and dynamic environment changes. Users can feed, play with, and heal their pet, triggering visual status updates and interactive animations.
-Technologies: React, Tailwind CSS, TypeScript, LocalStorage, Next.js
-Key Features:
-- Four core needs: hunger, happiness, cleanliness, and health
-- Real-time needs decay with visual feedback
-- Action-based needs improvement (feed, play, clean, heal)
-- Dynamic pet status display with emojis and animations
-- Environment color changes based on pet's health
-- LocalStorage persistence for pet state
-- Modern, responsive UI with toggleable light/dark mode`,
-    },
+    //     {
+    //       title: "Digital Pet",
+    //       path: "/projects/digital-pet",
+    //       image: "/projects/digital-pet/image.png",
+    //       description: `Digital Pet — React Application
+    // A virtual pet simulator with needs-based care and dynamic environment changes. Users can feed, play with, and heal their pet, triggering visual status updates and interactive animations.
+    // Technologies: React, Tailwind CSS, TypeScript, LocalStorage, Next.js
+    // Key Features:
+    // - Four core needs: hunger, happiness, cleanliness, and health
+    // - Real-time needs decay with visual feedback
+    // - Action-based needs improvement (feed, play, clean, heal)
+    // - Dynamic pet status display with emojis and animations
+    // - Environment color changes based on pet's health
+    // - LocalStorage persistence for pet state
+    // - Modern, responsive UI with toggleable light/dark mode`,
+    //     },
     {
       title: "Shape Manager",
       path: "/projects/shape-manager/index.html",
