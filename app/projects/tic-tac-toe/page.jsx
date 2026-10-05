@@ -1,7 +1,7 @@
 "use client";
 import "./style.css";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState } from "react";
 
 export function Board() {
   const winComboArr = ["012", "345", "678", "036", "147", "258", "048", "246"];
@@ -59,7 +59,9 @@ export function Board() {
         break;
       }
     }
-    _winCombo && setWinCombo(_winCombo);
+    if (_winCombo) {
+      setWinCombo(_winCombo);
+    }
   };
 
   const getWinerText = () => {

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function PricingComponent() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col items-center justify-center p-6">
+    <div className="box-border min-h-screen bg-slate-50 text-slate-800 flex flex-col items-center justify-center p-6">
       <main className="w-full max-w-6xl">
         <h1 className="mt-8 mb-12 text-center text-3xl md:text-5xl font-semibold text-gray-900">
           Choose your listening plan

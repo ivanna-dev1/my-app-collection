@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function CTAComponent() {
   return (
-    <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center p-4">
+    <div className="box-border min-h-screen bg-slate-900 flex flex-col items-center justify-center p-4">
       <div className="w-full">
         <div className="bg-indigo-600 text-white mt-8 p-4 md:w-1/2 mx-auto flex flex-col lg:flex-row justify-around items-center rounded-md shadow-2xl">
           <div>

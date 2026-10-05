@@ -5,6 +5,11 @@ import "./style.css";
 export default function FruitsSearch() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
+  const [searchedQuery, setSearchedQuery] = useState('');
+
+  const hasQuery = query.trim() !== '';
+  // "No results" показуємо тільки коли відповідь саме на цей запит уже прийшла
+  const isSearchDone = hasQuery && searchedQuery === query;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -12,17 +17,19 @@ export default function FruitsSearch() {
 
   useEffect(() => {
     if (query.trim() === '') {
-      setResults([]);
       return;
     }
     const timeoutId = setTimeout(async () => {
       try {
-        const response = await fetch(`https://fruit-search.freecodecamp.rocks/api/fruits?q=${query}`);
+        const response = await fetch(`https://fruit-search.freecodecamp.rocks/api/fruits?q=${encodeURIComponent(query)}`);
         const data = await response.json();
         setResults(data.map(fruit => fruit.name));
       } catch (error) {
         console.error("Error fetching data:", error);
+        setResults([]);
       }
+      // запам'ятовуємо, для якого запиту прийшла відповідь
+      setSearchedQuery(query);
     }, 700);
 
     return () => clearTimeout(timeoutId);
@@ -42,12 +49,12 @@ export default function FruitsSearch() {
           />
         </form>
         <div id="results">
-          {results.length > 0 ? (
+          {hasQuery && results.length > 0 ? (
             results.map(item => (
               <p key={item} className="result-item">{item}</p>
             ))
           ) : (
-            query.trim() !== '' && <p className="no-results">No results found</p>
+            isSearchDone && <p className="no-results">No results found</p>
           )}
         </div>
       </div>

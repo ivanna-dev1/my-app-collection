@@ -8,6 +8,8 @@ function Input(props) {
     <form
       onSubmit={(e) => {
         e.preventDefault();
+        // порожню задачу не додаємо
+        if (!todo.trim()) return;
         props.setTodos((prevTodos) => [
           ...prevTodos,
           { id: Date.now(), text: todo },
@@ -39,6 +41,7 @@ function EditInput(props) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          if (!todo.trim()) return;
           props.setTodos((prevTodos) =>
             prevTodos.map((item) => {
               if (item.id === props.todo.id) {
@@ -112,8 +115,8 @@ export default function TodoApp() {
             <li key={todo.id} className="todo-item">
               <input
                 type="checkbox"
-                value={todo.done}
-                onChange={(e) =>
+                checked={todo.done}
+                onChange={() =>
                   setTodos((prevTodos) =>
                     prevTodos.map((item) => {
                       if (item.id === todo.id) {

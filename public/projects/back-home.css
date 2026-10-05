@@ -1,0 +1,34 @@
+/* кнопка "На головну" для HTML-проєктів — такий самий вигляд, як у React-проєктів (app/projects/layout.jsx).
+   Стоїть унизу, бо зверху в лендінгах (Dior, iPhone, 3D game) логотип і меню */
+.back-home {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e4e4e7;
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #3f3f46;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.back-home:hover {
+  background: #fafafa;
+  color: #18181b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-home:active {
+  transform: scale(0.95);
+}
