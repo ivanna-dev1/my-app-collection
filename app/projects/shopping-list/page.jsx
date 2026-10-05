@@ -14,14 +14,12 @@ const items = [
   "Paper Towels",
   "Dish Soap",
 ];
-let prevToggleItem = null;
 
 export default function ShoppingList() {
   const [query, setQuery] = useState("");
   const [selectedItems, setSelectedItems] = useState([]);
 
   const filteredItems = useMemo(() => {
-    console.log("Filtering items...");
     return items.filter((item) =>
       item.toLowerCase().includes(query.toLowerCase()),
     );
@@ -35,13 +33,6 @@ export default function ShoppingList() {
     },
     [setSelectedItems],
   );
-
-  if (prevToggleItem !== toggleItem) {
-    console.log("New toggleItem function");
-    prevToggleItem = toggleItem;
-  } else {
-    console.log("Current toggleItem function");
-  }
 
   return (
     <div className="shopping-list-project">

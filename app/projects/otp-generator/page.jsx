@@ -8,8 +8,6 @@ export default function OTPGenerator() {
 
   const isWorkBot = oTPtimer !== null && oTPtimer > 0;
 
-  console.log(`Expires in: ${oTPtimer} seconds`);
-
   const handleClick = () => {
     // 6 numb Math.floor(Math.random() * (max - min + 1)) + min;
     const newOtp = Math.floor(100000 + Math.random() * 900000).toString();

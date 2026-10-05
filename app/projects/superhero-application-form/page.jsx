@@ -37,7 +37,10 @@ export default function SuperheroForm() {
       <div className='form-wrap'>
         <h2>Superhero Application Form</h2>
         <p>Please complete all fields</p>
-        <form onSubmit={() => alert("Form submitted!")}>
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          alert("Form submitted!");
+        }}>
           <div className='section'>
             <label>
               Hero Name

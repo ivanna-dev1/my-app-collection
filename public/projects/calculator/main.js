@@ -4,10 +4,16 @@ let firstNumber = "";
 let operator = "";
 let secondNumber = "";
 let result = "";
+// true одразу після "=", щоб нова цифра починала нове число, а не дописувалась до результату
+let isResult = false;
 console.log(firstNumber);
 
 function clickNumber(number) {
   if (operator === "") {
+    if (isResult) {
+      firstNumber = "";
+      isResult = false;
+    }
     firstNumber += number;
     input.value = firstNumber;
     console.log(number);
@@ -20,6 +26,7 @@ function clickNumber(number) {
 
 function clickSymbol(symbol) {
   if (firstNumber && !secondNumber) {
+    isResult = false;
     operator = symbol;
     input.value = firstNumber + " " + symbol + " ";
     console.log(symbol);
@@ -64,15 +71,19 @@ function clickChangeSymbol() {
 }
 
 function clickPersent() {
+  if (!firstNumber) {
+    return;
+  }
   if (operator === "") {
-    input.value = firstNumber + "%";
-    firstNumber = (secondNumber / 100) * firstNumber;
-
+    // 50% => 0.5
+    firstNumber = (parseFloat(firstNumber) / 100).toString();
+    input.value = firstNumber;
     console.log(firstNumber);
-  } else {
-    secondNumber = firstNumber / 100;
+  } else if (secondNumber) {
+    // 200 + 10% => 200 + 20 (10% від першого числа)
+    secondNumber = ((parseFloat(firstNumber) * parseFloat(secondNumber)) / 100).toString();
     input.value = firstNumber + " " + operator + " " + secondNumber;
-    console.log(number);
+    console.log(secondNumber);
   }
 }
 
@@ -101,7 +112,6 @@ function clickEqual() {
       operator === "undefined"
     ) {
       clickSmile();
-      console.log("ty loh");
       return;
     }
 
@@ -141,6 +151,7 @@ function clickEqual() {
     firstNumber = result.toString();
     secondNumber = "";
     operator = "";
+    isResult = true;
     ul.prepend(li);
   }
 }
@@ -151,6 +162,7 @@ function clickDelete() {
   operator = "";
   secondNumber = "";
   result = "";
+  isResult = false;
   console.log("DELETED");
 }
 

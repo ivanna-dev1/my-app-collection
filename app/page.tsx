@@ -65,13 +65,11 @@ Key Features:
       path: "/projects/todo-app",
       image: "/projects/todo-app/image.png",
       description: `Todo App — React Application
-A comprehensive task management application that allows users to track their daily activities. Features robust state management and local storage integration.
-Technologies: React, LocalStorage, Tailwind CSS, JavaScript
+A comprehensive task management application that allows users to track their daily activities. Features robust state management.
+Technologies: React, Tailwind CSS, JavaScript
 Key Features:
 - Add, edit, and delete tasks (CRUD operations)
-- Mark tasks as complete or pending
-- Persistent data storage using LocalStorage
-- Filtering capabilities (All, Active, Completed)`,
+- Mark tasks as complete or pending`,
     },
     {
       title: "Calculator",

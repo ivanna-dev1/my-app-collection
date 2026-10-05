@@ -6,7 +6,6 @@ export default function ColorPicker() {
   const [color, setColor] = useState("#ffffff");
 
   const handleColorPicker = (e) => {
-    console.log(e.target.value);
     setColor(e.target.value);
   };
 

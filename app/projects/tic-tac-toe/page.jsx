@@ -8,7 +8,6 @@ export function Board() {
   const [items, setItems] = useState(["", "", "", "", "", "", "", "", ""]);
   const [order, setOrder] = useState("X");
   const [winCombo, setWinCombo] = useState("");
-  console.log("winCombo", winCombo);
 
   const handleSighChange = (item, index) => {
     if (winCombo) {

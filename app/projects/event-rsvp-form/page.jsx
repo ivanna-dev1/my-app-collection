@@ -9,7 +9,6 @@ export default function EventRSVPForm() {
   const [dietary, setDietary] = useState("");
   const [guests, setGuests] = useState(false);
   const [displayForm, setDisplayForm] = useState(false);
-  console.log({ name, email, number, dietary, guests, displayForm });
 
   return (
     <div className="event-rsvp-form-project">

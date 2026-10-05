@@ -45,15 +45,16 @@ export default function CurrencyConverter() {
 
   const startValue = arrBuild.find((i) => i.name === startCur).rate;
   const targValue = arrBuild.find((i) => i.name === targCur).rate;
-  console.log("startCur", startCur, "startValue", startValue);
-  console.log("targCur", targCur, "targValue", targValue);
 
-  // countValue calculates the coefficient,
-  // which we will then multiply by 2val (target value)
+  // rate = скільки гривень коштує 1 одиниця валюти.
+  // countValue переводить суму в гривні (множимо на курс 1вал),
+  // потім ділимо на курс 2вал.
+  // ---
+  // rate = how many UAH one unit of the currency costs.
+  // countValue converts the amount to UAH (multiply by startValue),
+  // which we will then divide by 2val (target value)
   const countValue = (startValue, count) => {
-    const koeficient = count / startValue;
-    console.log("koeficient", koeficient);
-    return koeficient;
+    return count * startValue;
   };
 
   // Умова, - перераховується тільки
@@ -65,13 +66,12 @@ export default function CurrencyConverter() {
   // the function and in memo.
   const res = useMemo(() => countValue(startValue, count), [startValue, count]);
 
-  // The rest is calculated separately with the coefficient
+  // The rest is calculated separately with the UAH amount
   // +round
   // +2 знаки після коми -> toString.
-  const secNumb = res * targValue;
+  const secNumb = res / targValue;
   const numbRound = Math.round(secNumb * 100) / 100;
   const stringNumb = numbRound.toFixed(2);
-  console.log("secNumb", secNumb, "numbRound", numbRound, stringNumb);
 
   return (
     <div className="currency-converter-project">
